@@ -1,0 +1,19 @@
+[Nibbler]
+{
+	[Core]
+	{
+		IGlib *		create()
+		IGlib *		destroy()
+
+		IGlib *		lib
+	}
+	[Lib1] : IGlib
+	{
+		-> Lib1 *			create()
+		-> Lib1 *			destroy()
+		
+		-> std::stack<IGlib::Event>	_stack
+	}
+	[Lib2]
+	[lib3]
+}
