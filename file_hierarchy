@@ -1,0 +1,15 @@
+[.]
+-> [ext]
+   -> [SFML]
+   -> [love]
+-> [lib]
+   -> [lib1]
+      -> [inc] : local lib1 includes
+      -> [src] : build into lib1.so with nibbler.a
+   -> [lib2]
+      -> [inc] : local lib2 includes
+      -> [src] : build into lib2.so with nibbler.a
+   -> ...
+-> [inc] : global includes
+-> [src] : build into nibbler.a
+-> [main.cpp] : build into nibbler with nibbler.a
