@@ -125,7 +125,7 @@ function love.draw()
 		for j=-test,test do
 			if v[j + #v - k] == '2' then love.graphics.setColor(255, 0, 0, 255)
 			elseif v[j + #v - k] == '0' then love.graphics.setColor(255, 255, 255, 100)
-			elseif v[j + #v - k] == '1' then love.graphics.setColor(100, 100, 100, 100)
+			-- elseif v[j + #v - k] == '1' then love.graphics.setColor(100, 100, 100, 100)
 			elseif v[j + #v - k] == '11' then love.graphics.setColor(0, 255, 0, 100)
 			else love.graphics.setColor(255, 255, 255, 255) end
 			love.graphics.rectangle("fill", i * scale, k * scale, 1 * scale, 1 * scale)

@@ -8,26 +8,13 @@ CC		=	clang++
 FLAGS	=	-Wall -Werror -Wextra
 
 INC		=	-Iinc
-INC		+=	-Iext/SFML-2.2/include
-# INC		+=	-Iext/lua-5.3.0/src/
-
-LIBS	=	-Lext/SFML-2.2/lib
-LIBS	+=	-lsfml-graphics
-LIBS	+=	-lsfml-window
-LIBS	+=	-lsfml-system
-LIBS	+=	-lsfml-audio
-# LIBS	+=	-lsfml-network
-
-#LIBS	+=	-Llib/lua-5.3.0/src/
-#LIBS	+=	-llua
-
 
 .PHONY: all re clean fclean
 
 all: _libgraphic $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -o $@ $(OBJ) $(LIBS) -rpath ext/SFML-2.2/extlibs
+	$(CC) -o $@ $(OBJ) -rpath ext/SFML-2.2/extlibs
 
 _libgraphic:
 	make -C lib
